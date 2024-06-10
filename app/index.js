@@ -12,6 +12,10 @@ let userData = {
   activities: [],
 };
 
+if (!(await db.has("PORT"))) {
+  await db.set("PORT", "3000");
+  userData.updated = true;
+}
 if (!(await db.has("TOKEN"))) {
   await db.set("TOKEN", "myBotToken");
   userData.updated = true;
@@ -79,4 +83,5 @@ Bun.serve({
     },
     close: async (ws) => clients.pop(ws),
   },
+  port: await db.get("PORT"),
 });
