@@ -23,6 +23,7 @@ jobs:
 
       - name: Compile
         id: compile
+        run: bun install
         run: bun run compile.js
 
       - name: Create release
