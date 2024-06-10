@@ -23,8 +23,7 @@ jobs:
 
       - name: Compile
         id: compile
-        run: bun install
-          -  bun run compile.js
+        run: bun install && bun run compile.js
 
       - name: Create release
         uses: marvinpinto/action-automatic-releases@latest
