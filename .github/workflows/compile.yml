@@ -32,5 +32,5 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
           automatic_release_tag: ${{ steps.date.outputs.date }}
-          title: hi ${{ steps.date.outputs.date }} release
+          title: string ${{ steps.date.outputs.date }} release
           files: dist/*
