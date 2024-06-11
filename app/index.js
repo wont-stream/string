@@ -13,7 +13,7 @@ let userData = {
 };
 
 if (!(await db.has("HOSTNAME"))) {
-  await db.set("HOSTNAME", "3000");
+  await db.set("HOSTNAME", "0.0.0.0");
   userData.updated = true;
 }
 if (!(await db.has("PORT"))) {
