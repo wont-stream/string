@@ -1,6 +1,6 @@
 import { defaultTransformers } from "@lilybird/transformers";
 import { createClient, Intents } from "lilybird";
-import DB from "./db";
+import DB from "./db.js";
 
 const db = await DB("./config.json");
 const clients = [];
@@ -21,7 +21,7 @@ if (!(await db.has("TOKEN"))) {
   userData.updated = true;
 }
 if (!(await db.has("USERID"))) {
-  await db.set("pass", "1125315673829154837");
+  await db.set("USERID", "1125315673829154837");
   userData.updated = true;
 }
 
