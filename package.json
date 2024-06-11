@@ -3,7 +3,7 @@
   "description": "string - the one user lanyard clone",
   "version": "0.0.1",
   "type": "module",
-  "main": "./src/index.js",
+  "main": "./app/index.js",
   "scripts": {
     "start": "bun ."
   },
