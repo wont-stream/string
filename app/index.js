@@ -12,6 +12,10 @@ let userData = {
   activities: [],
 };
 
+if (!(await db.has("HOSTNAME"))) {
+  await db.set("HOSTNAME", "3000");
+  userData.updated = true;
+}
 if (!(await db.has("PORT"))) {
   await db.set("PORT", "3000");
   userData.updated = true;
@@ -84,4 +88,5 @@ Bun.serve({
     close: async (ws) => clients.pop(ws),
   },
   port: await db.get("PORT"),
+  hostname: await db.get("HOSTNAME"),
 });
