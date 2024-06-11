@@ -25,7 +25,7 @@ if (!(await db.has("USERID"))) {
   userData.updated = true;
 }
 
-if (userData.updated) {
+if (userData?.updated == true) {
   throw new Error("Please update your config.");
 }
 
