@@ -48,10 +48,11 @@ const sendWebSocketMessage = async () => {
 
 Bun.serve({
   fetch(req, server) {
-    if (server.upgrade(req)) {
+    if (req.url.endsWith("/ws") && server.upgrade(req)) {
       return;
+    } else {
+      return Response.json(userData);
     }
-    return new Response("Upgrade failed", { status: 500 });
   },
   websocket: {
     open: async (ws) => {
