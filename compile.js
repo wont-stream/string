@@ -15,7 +15,7 @@ for (let i = 0; i < targets.length; i++) {
 
 for (const combo of combos) {
 	try {
-		await $`bun build --compile --target=${combo} ./dist.js --outfile dist/${combo.replace(
+		await $`bun build --compile --target=${combo} ./index.js --outfile dist/${combo.replace(
 			"bun",
 			"string",
 		)}`;
