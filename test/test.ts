@@ -1,1 +1,1 @@
-require("os").platform();
+require("node:os").platform();
