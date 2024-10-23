@@ -1,11 +1,15 @@
-# Welcome to Lilybird
+# string
 
-## Getting Started
+To install dependencies:
 
-To run your bot you can run:
-
-```sh
-bun run start
+```bash
+bun install
 ```
 
-> Generated with @lilybird/create 0.2.1.
+To run:
+
+```bash
+bun run index.ts
+```
+
+This project was created using `bun init` in bun v1.1.33. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.

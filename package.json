@@ -1,17 +1,14 @@
 {
   "name": "string",
-  "description": "string - the one user lanyard clone",
-  "version": "0.0.1",
+  "module": "index.ts",
   "type": "module",
-  "main": "./app/index.js",
-  "scripts": {
-    "start": "bun ."
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.6.3"
   },
   "dependencies": {
-    "@lilybird/transformers": "^0.4.1",
-    "lilybird": "^0.7.1"
-  },
-  "devDependencies": {
-    "bun-types": "^1.1.12"
+    "lilybird": "^0.8.0"
   }
 }

@@ -13,7 +13,7 @@ for (let i = 0; i < targets.length; i++) {
   }
 }
 
-combos.forEach(async (combo) => {
+for (const combo of combos) {
   try {
     await $`bun build --compile --target=${combo} ./dist.js --outfile dist/${combo.replace(
       "bun",
@@ -22,4 +22,4 @@ combos.forEach(async (combo) => {
   } catch {
     console.log(`Attempted to build unsupported target: ${combo}`);
   }
-});
+}
