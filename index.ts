@@ -77,7 +77,11 @@ Bun.serve({
 		if (req.url.endsWith("/ws") && server.upgrade(req)) {
 			return;
 		}
-		return Response.json(userData);
+		return Response.json(userData, {
+			headers: {
+				"Access-Control-Allow-Origin": "*",
+			},
+		});
 	},
 	websocket: {
 		open: async (ws) => {
